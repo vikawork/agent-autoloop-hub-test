@@ -36,6 +36,8 @@ Each restart waited 2 seconds after the killed process exited, using the same sc
 
 Acknowledged receipts retained after restart: 128 of 128. Unacknowledged receipts total: 72. The independent effects checked were the question, the audit timer and the first round’s completed state. Both allowed unacknowledged outcomes remain in the logs.
 
+Final question-card counts after replay: `{"1": 200}`; round counts: `{"2": 200}`; completion counts: `{"1": 200}`. Histogram keys are counts per run; values are the number of runs.
+
 Fixed seed: 12648430. Delay draws and their order are retained in `results/delays.json`; 12 kills preceded submission. Actual kill time relative to request write completion, milliseconds min/median/max: -26.021 / 14.441 / 39.783. These are scheduled delays, not a controlled cut inside a database instruction.
 
 ## D — socket closed without reading acknowledgement
