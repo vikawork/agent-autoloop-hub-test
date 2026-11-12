@@ -1,0 +1,25 @@
+{
+  "network": "none",
+  "cap_drop": [
+    "ALL"
+  ],
+  "security_opt": [
+    "no-new-privileges"
+  ],
+  "privileged": false,
+  "readonly_root": true,
+  "memory_bytes": 536870912,
+  "nano_cpus": 1000000000,
+  "mounts": [
+    {
+      "Type": "bind",
+      "Destination": "/src",
+      "RW": false
+    },
+    {
+      "Type": "volume",
+      "Destination": "/work",
+      "RW": true
+    }
+  ]
+}

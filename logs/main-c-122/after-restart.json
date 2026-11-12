@@ -1,0 +1,26 @@
+{
+  "label": "after-restart",
+  "ms": 3396.039846,
+  "cards": [],
+  "runs": [
+    {
+      "id": 1,
+      "state": "claimed",
+      "summary": null,
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:29:56.421Z",
+      "finished_at": null,
+      "seen_at": "2026-11-12T05:29:56.421Z"
+    }
+  ],
+  "timers": [],
+  "deliveries": [],
+  "counts": {
+    "question_cards": 0,
+    "completion_cards": 0,
+    "completions": 0,
+    "rounds": 1,
+    "audit_timers": 0
+  }
+}

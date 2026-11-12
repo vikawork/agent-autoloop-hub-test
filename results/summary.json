@@ -1,0 +1,1250 @@
+{
+  "setup": {
+    "tag": "v1.8.2",
+    "sha": "306e0873edc84a658ff1351e0f43f637edaf0e48",
+    "v1.7.1_sha": "24e21c6ba7c30808467ee93c99b3a1200ac9246e",
+    "image": "node:24@sha256:9d266751ca3d7fdbe651c878ffd5ad0a42fed49a18c283509267c97f025b7496",
+    "image_id": "sha256:8cbdee932da37778bbb89f5c9ae09d07b26687490028709d8802e66c330a33e0",
+    "cpu": "AMD Ryzen 9 9950X 16-Core Processor",
+    "setup_utc": "2026-11-12T05:24:54.914387+00:00",
+    "source": ".studio/ai-channel/autoloop/src",
+    "release_notes": [
+      {
+        "tag": "v1.8.2",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.8.2",
+        "body": "## \u66f4\u65b0\u5185\u5bb9\n\n- \u65b0\u589e ZCode \u63a5\u5355\uff1a\u5185\u7f6e ZCode Agent \u9002\u914d\u5668\uff1bZCode \u8f93\u51fa\u505c\u5728\u5bf9\u8c61\u4e2d\u95f4\u65f6\uff0c\u8bfb\u53d6\u4e0d\u518d\u5361\u4f4f\u3002\n- \u89c4\u5219\u53ef\u4ee5\u5199\u53ef\u9009\u7684\u4f1a\u8bdd\u6807\u9898 `title`\uff0c\u653e\u5728\u63d0\u793a\u8bcd\u7b2c\u4e00\u884c\uff0c\u6309\u7b2c\u4e00\u6761\u6d88\u606f\u7ed9\u4f1a\u8bdd\u8d77\u540d\u7684\u5ba2\u6237\u7aef\u80fd\u5206\u6e05\u6bcf\u4e2a\u4e8b\u9879\u3002\n- \u6682\u505c\u671f\u95f4\u8df3\u8fc7\u7684\u4e8b\u4ef6\u73b0\u5728\u770b\u5f97\u5230\u3001\u80fd\u8865\u8dd1\uff1a`resume` \u548c `status` \u4f1a\u5217\u51fa\u6682\u505c\u671f\u95f4\u8df3\u8fc7\u7684\u4e8b\u4ef6\uff0c\u65b0\u589e `agent-autoloop replay <\u89c4\u5219> --since <\u65f6\u95f4>`\uff08\u4e5f\u6709\u63a5\u53e3\u548c MCP \u7248\u672c\uff09\u3002\u6253\u5370\u7684\u8865\u8dd1\u547d\u4ee4\u7167\u6284\u5c31\u80fd\u7528\uff0cWindows \u4e0a\u4e5f\u4e00\u6837\u3002\n- \u4ea4\u4ed8\uff1aGitHub \u7684\u68c0\u67e5\u4e00\u76f4\u6392\u961f\u4e0d\u52a8\u65f6\uff0c\u81ea\u52a8\u91cd\u65b0\u89e6\u53d1\u4e00\u6b21\uff1b\u4ecd\u4e0d\u52a8\u5c31\u7acb\u523b\u9000\u56de\u5e76\u8bf4\u660e\u539f\u56e0\uff0c\u4e0d\u518d\u767d\u7b49\u4e24\u4e2a\u591a\u5c0f\u65f6\u3002\n- \u4ea4\u4ed8\uff1a\u4fee\u590d\u590d\u67e5\u4f1a\u8bdd\u7684\u5f52\u5c5e\u548c\u4ea4\u4ed8\u7ec8\u6001\u3002\n- \u534f\u8bae\u6587\u6863\u8865\u4e0a healthz \u548c state \u7684\u4e24\u4e2a\u5b57\u6bb5\u3002\n\n\n## What's changed\n\n- ZCode support: a built-in ZCode agent adapter; reading ZCode output that stops in the middle of an object no longer hangs.\n- Rules can set an optional session `title`, put on the prompt's first line, so clients that name a session after its first message can tell runs apart.\n- Events skipped while a rule was paused are now visible and can be replayed: `resume` and `status` list them, and there is a new `agent-autoloop replay <rule> --since <time>` (also over HTTP and MCP). The printed replay command works as copied, Windows included.\n- Delivery: when GitHub leaves a check queued with no jobs, it is re-triggered once; if it still doesn't start, the PR is handed back at once with the reason instead of waiting over two hours.\n- Delivery: fixed which session a follow-up review belongs to, and delivery end states.\n- The protocol now documents two more fields of healthz and state.\n"
+      },
+      {
+        "tag": "v1.8.1",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.8.1",
+        "body": "- \u5e94\u6025\u4ea4\u4ed8\u9047\u5230\u4e34\u65f6\u6545\u969c\u540e\uff0c\u53ef\u4ee5\u5728\u539f\u6765\u7684\u4e34\u65f6\u76ee\u5f55\u91cd\u8bd5\u3002\n- \u9879\u76ee\u6269\u5927\u6df1\u5ba1\u8303\u56f4\u65f6\uff0c\u4ea4\u4ed8\u63d2\u4ef6\u4f1a\u6309\u5b9e\u9645\u8981\u6c42\u7684\u6df1\u5ea6\u6838\u5bf9\u5df2\u6709\u5ba1\u67e5\u3002\u9700\u8981\u66f4\u6df1\u7684\u5ba1\u67e5\u65f6\u4f1a\u91cd\u65b0\u5ba1\u67e5\u6539\u52a8\u3002"
+      },
+      {
+        "tag": "v1.8.0",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.8.0",
+        "body": "- \u591a\u4e2a\u9879\u76ee\u53ef\u4ee5\u5171\u7528\u4e00\u4efd\u5ba1\u67e5\u7b56\u7565\u3002\u4ea4\u4ed8\u63d2\u4ef6\u8bb0\u4e0b\u6bcf\u8f6e\u5ba1\u67e5\uff0c\u7eed\u5ba1\u65f6\u805a\u7126\u65b0\u63d0\u4ea4\u3002\n- \u4ea4\u4ed8\u63d2\u4ef6\u6309\u5df2\u68c0\u67e5\u7684\u63d0\u4ea4\u63a8\u8fdb\u5408\u5e76\uff0c\u6838\u5b9e Ship \u548c\u7ebf\u4e0a\u7248\u672c\uff0c\u5e76\u53ef\u628a\u8fdb\u5ea6\u548c\u901a\u77e5\u63a5\u5230\u5df2\u6709\u5de5\u5177\u3002\n- \u89c4\u5219\u53ef\u4ee5\u9650\u5236\u6bcf\u4e2a\u9879\u76ee\u548c\u6267\u884c\u8005\u540c\u65f6\u5728\u624b\u7684\u4efb\u52a1\u6570\u3002\n- \u4e2d\u53f0\u505c\u673a\u65f6\uff0c\u53ef\u4ee5\u5728\u63a5\u5355\u7535\u8111\u4e0a\u7528\u540c\u4e00\u4e2a\u63d2\u4ef6\u76f4\u63a5\u5904\u7406\u4e00\u5f20\u5df2\u4ea4\u63a5\u7684 PR\u3002\n\n[\u914d\u7f6e\u624b\u518c](https://github.com/KKKKhazix/agent-autoloop/blob/v1.8.0/skills/agent-autoloop/SKILL.md#\u4ea4\u4ed8\u6d41\u6c34\u7ebf)"
+      },
+      {
+        "tag": "v1.7.2",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.7.2",
+        "body": "## \u4fee\u590d\n\n- Windows \u62d2\u7edd\u6ce8\u518c\u65b0\u7684\u767b\u5f55\u4efb\u52a1\u65f6\uff0c\u539f\u4efb\u52a1\u548c\u8fd0\u884c\u4e2d\u7684\u4e2d\u53f0\u7ee7\u7eed\u5de5\u4f5c\u3002\u6ce8\u518c\u6210\u529f\u540e\u624d\u6362\u8fdb\u7a0b\u3002\uff08#208\u3001#214\uff09\n- Windows \u63a5\u5355\u7a0b\u5e8f\u6062\u590d\u7528\u4f8b\u5148\u786e\u8ba4 Agent \u5b9e\u9645\u542f\u52a8\uff0c\u518d\u5236\u9020\u6545\u969c\u3002\uff08#219\uff09\n\n\u4ece `v1.7.1` \u6216\u66f4\u65e9\u7684\u7248\u672c\u7b2c\u4e00\u6b21\u5347\u7ea7\uff0cWindows \u8bf7\u91cd\u8dd1 [PowerShell \u5b89\u88c5\u547d\u4ee4](https://github.com/KKKKhazix/agent-autoloop/blob/v1.7.2/INSTALL.md#\u5b89\u88c5)\u3002\u5b89\u88c5\u5668\u5207\u5230\u65b0\u7248\u672c\u540e\u7528\u65b0\u7684\u8fdb\u7a0b\u66f4\u65b0\u767b\u5f55\u4efb\u52a1\uff0c\u5f53\u6b21\u5347\u7ea7\u5373\u91c7\u7528\u4fee\u590d\u540e\u7684\u987a\u5e8f\u3002\n\n## \u65b0\u589e\n\n- \u98de\u4e66\u63d0\u95ee\u5361\u7247\u652f\u6301\u76f4\u63a5\u586b\u5199\u5e76\u63d0\u4ea4\u6587\u5b57\u56de\u7b54\u3002\uff08#228\uff09\n- `rules.json` \u7684 `defaultChannels` \u53ef\u4ee5\u6307\u5b9a\u6ca1\u6709\u5355\u72ec\u901a\u9053\u8bbe\u7f6e\u7684\u5361\u7247\u548c\u901a\u77e5\u53d1\u5230\u54ea\u91cc\u3002\uff08#223\uff09\n- \u4ea4\u4ed8\u9879\u76ee\u53ef\u901a\u8fc7 `review.agents` \u6309\u5199\u4ee3\u7801\u7684 Agent \u914d\u7f6e\u5ba1\u67e5\u5668\u6216\u514d\u5ba1\uff0c\u5173\u952e\u8def\u5f84\u4ecd\u6309\u9879\u76ee\u7684\u6df1\u5ba1\u89c4\u5219\u5904\u7406\u3002\uff08#224\uff09\n\n---\n\n## Fixes\n\n- When Windows refuses to register an updated login task, the existing task and running hub stay available. The process is replaced after successful registration. (#208, #214)\n- The Windows worker recovery test waits for the agent to actually start before introducing the fault. (#219)\n\nFor the first Windows upgrade from `v1.7.1` or earlier, rerun the [PowerShell installer](https://github.com/KKKKhazix/agent-autoloop/blob/v1.7.2/INSTALL.md#\u5b89\u88c5). It switches to the new version before invoking the service installer, so this upgrade already uses the corrected order.\n\n## Added\n\n- Feishu question cards can accept a free-text answer. (#228)\n- `defaultChannels` in `rules.json` sets where cards and notices without an explicit channel list go. (#223)\n- Delivery projects can choose a reviewer or an exemption per authoring agent with `review.agents`. Critical paths retain the project's deeper review policy. (#224)\n\n[All changes](https://github.com/KKKKhazix/agent-autoloop/compare/v1.7.1...v1.7.2)"
+      },
+      {
+        "tag": "v1.7.1",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.7.1",
+        "body": "## \u4fee\u590d\n\n- **macOS \u670d\u52a1\u8d77\u4e0d\u6765**\uff1a\u4ece\u56fe\u5f62\u754c\u9762\u5e94\u7528\u91cc\u62c9\u8d77\u7684\u7ec8\u7aef\uff08umask \u4e3a 0\uff09\u5b89\u88c5\u65f6\uff0cLaunchAgent \u7684 plist \u4f1a\u88ab\u5199\u6210\u6240\u6709\u4eba\u53ef\u5199\uff0claunchd \u62d2\u7edd\u52a0\u8f7d\uff0c\u53ea\u62a5 `Bootstrap failed: 5`\uff1b\u4e4b\u540e\u600e\u4e48\u91cd\u88c5\u90fd\u5361\u5728\u8fd9\u91cc\u3002\u73b0\u5728\u6bcf\u6b21\u5b89\u88c5\u90fd\u628a\u5b83\u8bbe\u6210 644\uff0c\u91cd\u88c5\u4e00\u6b21\u5c31\u80fd\u4fee\u597d\u5df2\u7ecf\u574f\u6389\u7684\u673a\u5668\u3002\uff08#210\uff09\n- **Codex \u65ad\u7ebf\u53c8\u6062\u590d\u7684\u4e00\u8f6e\u88ab\u5f53\u6210\u6ca1\u8dd1\u6210**\uff1aCodex \u4e2d\u9014\u62a5 `Reconnecting...`\u3001\u968f\u540e\u81ea\u5df1\u6362\u4e86\u4f20\u8f93\u65b9\u5f0f\u8dd1\u5b8c\uff0c\u539f\u6765\u4f1a\u88ab\u5224\u6210\u5931\u8d25\u3001\u6574\u8f6e\u91cd\u505a\u3002\u73b0\u5728\u8dd1\u5b8c\u4e86\u5c31\u7b97\u8dd1\u5b8c\u3002\uff08#211\uff09\n- **\u6536\u4ef6\u7bb1\u6a21\u677f\u6f0f\u4fe1**\uff1a\u88ab `skipSenders` \u8df3\u8fc7\u7684\u901a\u77e5\u90ae\u4ef6\u4e0d\u518d\u5360\u8bfb\u53d6\u540d\u989d\uff0c\u5217\u8868\u4f1a\u4e00\u9875\u9875\u5f80\u4e0b\u7ffb\uff1b\u6ca1\u8bfb\u5230\u65f6\u95f4\u7a97\u5c3d\u5934\uff08\u5305\u62ec\u6536\u6ee1\u4e0a\u9650\u800c\u540e\u9762\u8fd8\u6709\uff09\u65f6\uff0c\u5feb\u7167\u3001\u56de\u6267\u548c\u6e05\u5355\u90fd\u5199\u660e\u8fd8\u6709\u90ae\u4ef6\u6ca1\u8bfb\uff0c\u4e0d\u518d\u8bf4\u6210\u201c\u6ca1\u6709\u9700\u8981\u770b\u7684\u90ae\u4ef6\u201d\u3002\uff08#212\u3001#216\uff09\n\n## \u65b0\u589e\n\n- MCP \u65b0\u589e `pause`\u3001`resume`\u3001`run` \u4e09\u4e2a\u5de5\u5177\uff0c\u548c\u547d\u4ee4\u884c\u4e00\u6837\u6682\u505c\u3001\u6062\u590d\u3001\u7acb\u5373\u8fd0\u884c\u4e00\u6761\u89c4\u5219\uff0c\u8981\u672c\u4eba\u5bc6\u94a5\u3002\uff08#203\uff09\n- `agent-autoloop rules explain [\u6587\u4ef6]` \u663e\u793a\u89c4\u5219\u53ea\u53d1\u7684\u901a\u9053\uff0c\u4e5f\u80fd\u8bfb\u4e00\u4efd\u8349\u7a3f\u6587\u4ef6\u3002\uff08#204\uff09\n- README \u5199\u660e OpenClaw \u7684 `agent exec` \u9ed8\u8ba4\u6bcf\u6b21\u53ea\u8dd1 600 \u79d2\uff0c\u957f\u4efb\u52a1\u5728\u547d\u4ee4\u91cc\u52a0 `--timeout`\u3002\uff08#215\uff09\n\n\n---\n\n## Fixes\n\n- **macOS service never starting**: installing from a shell with umask 0 (one a GUI app opened) left the LaunchAgent plist world-writable, which launchd refuses to load with only `Bootstrap failed: 5`, and reinstalling kept the bad mode. Every install now sets it to 644, so one reinstall repairs an affected machine. (#210)\n- **A Codex run that reconnected was counted as failed**: when Codex reported `Reconnecting...` mid-run and then finished on another transport, the whole run was thrown away and redone. A finished run now counts as finished. (#211)\n- **Inbox triage missing mail**: senders in `skipSenders` no longer use up the read limit; the listing is paged. When the window wasn't read to its end (including when the limit filled while more mail remained), the snapshot, receipt and checklist say mail was left unread instead of \"nothing to read\". (#212, #216)\n\n## New\n\n- MCP gains `pause`, `resume` and `run`, matching the CLI commands for pausing, resuming and running a rule now; they need the owner key. (#203)\n- `agent-autoloop rules explain [file]` shows a rule's `channels` and can read a draft file. (#204)\n- The README notes that OpenClaw's `agent exec` stops each run after 600 seconds by default; add `--timeout` for long work. (#215)\n"
+      }
+    ],
+    "seed": 12648430,
+    "node_major": 24,
+    "idle_seconds": 10,
+    "restart_wait_seconds": 2,
+    "F_runs": 5,
+    "F_absent_window_seconds": 615,
+    "F_online_window_seconds": 315,
+    "baseline_tag": "v1.7.1",
+    "reconnect_claim": "CLAIM-0001",
+    "E_post_restart_seconds": 65,
+    "release_changes": [
+      {
+        "tag": "v1.7.2",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.7.2",
+        "change": "Windows registration failure retains the existing service and hub until replacement succeeds; the worker recovery fixture waits until an agent starts before fault injection. Feishu text answers and default channel routing were added."
+      },
+      {
+        "tag": "v1.8.0",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.8.0",
+        "change": "Per-rule and per-agent active-task limits were added. Delivery records review rounds and supports emergency handling of a handed-off PR when the hub is unavailable."
+      },
+      {
+        "tag": "v1.8.1",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.8.1",
+        "change": "Emergency delivery can retry transient failures in its existing temporary directory; deeper review requirements can trigger another review."
+      },
+      {
+        "tag": "v1.8.2",
+        "url": "https://github.com/KKKKhazix/agent-autoloop/releases/tag/v1.8.2",
+        "change": "Events skipped during pauses can be replayed. Delivery retries a stalled queued GitHub check once, then hands it back; follow-up review ownership and delivery end states were fixed. Reading incomplete ZCode output no longer hangs."
+      }
+    ]
+  },
+  "expected": {
+    "A": 30,
+    "B": 30,
+    "C": 200,
+    "D": 100,
+    "E": 100,
+    "F": 5,
+    "F-online": 5
+  },
+  "generated_utc": "2026-11-12T05:38:11.948289+00:00",
+  "start_utc": "2026-11-12T05:25:08.321Z",
+  "end_utc": "2026-11-12T05:36:37.599Z",
+  "wall_seconds": 689.278,
+  "node_versions": [
+    "v24.22.3"
+  ],
+  "health_commit_histogram": {
+    "dev": 478
+  },
+  "experiments": {
+    "A": {
+      "n": 30,
+      "expected_n": 30,
+      "observed": 30,
+      "errors": [],
+      "success": 30,
+      "wall_seconds": {
+        "min": 10.582,
+        "median": 10.667,
+        "max": 11.385
+      },
+      "final_counts": {
+        "question_cards": {
+          "1": 30
+        },
+        "completion_cards": {
+          "1": 30
+        },
+        "completions": {
+          "1": 30
+        },
+        "rounds": {
+          "2": 30
+        }
+      },
+      "answer_in_context": 30,
+      "new_round": 30,
+      "hub_present_worker_absent": 30,
+      "idle_seconds": {
+        "min": 10.0,
+        "median": 10.001,
+        "max": 10.002
+      },
+      "idle_cpu_ms": {
+        "min": 0.0,
+        "median": 0.0,
+        "max": 20.0
+      },
+      "idle_rss_kib": {
+        "min": 111584,
+        "median": 114678.0,
+        "max": 116604
+      }
+    },
+    "B": {
+      "n": 30,
+      "expected_n": 30,
+      "observed": 30,
+      "errors": [],
+      "success": 30,
+      "wall_seconds": {
+        "min": 3.025,
+        "median": 3.367,
+        "max": 3.584
+      },
+      "final_counts": {
+        "question_cards": {
+          "1": 30
+        },
+        "completion_cards": {
+          "1": 30
+        },
+        "completions": {
+          "1": 30
+        },
+        "rounds": {
+          "2": 30
+        }
+      },
+      "answer_in_context": 30,
+      "new_round": 30,
+      "hub_present_worker_absent": 30,
+      "question_survived": 30
+    },
+    "C": {
+      "n": 200,
+      "expected_n": 200,
+      "observed": 200,
+      "errors": [],
+      "success": 200,
+      "wall_seconds": {
+        "min": 2.826,
+        "median": 2.992,
+        "max": 3.778
+      },
+      "final_counts": {
+        "question_cards": {
+          "1": 200
+        },
+        "completion_cards": {
+          "1": 200
+        },
+        "completions": {
+          "1": 200
+        },
+        "rounds": {
+          "2": 200
+        }
+      },
+      "answer_in_context": 200,
+      "new_round": 200,
+      "hub_present_worker_absent": 200,
+      "acknowledged": 128,
+      "acknowledged_retained": 128,
+      "unacknowledged": 72,
+      "unack_applied": 20,
+      "unack_absent": 52,
+      "partial": 0,
+      "negative_delays": 12,
+      "delay_histogram": {
+        "-1": 7,
+        "-5": 5,
+        "0": 7,
+        "1": 7,
+        "10": 5,
+        "11": 7,
+        "12": 6,
+        "13": 6,
+        "14": 7,
+        "15": 6,
+        "16": 6,
+        "17": 6,
+        "18": 6,
+        "19": 5,
+        "2": 5,
+        "20": 6,
+        "21": 6,
+        "22": 7,
+        "23": 6,
+        "24": 6,
+        "25": 7,
+        "26": 7,
+        "27": 6,
+        "28": 5,
+        "29": 5,
+        "3": 6,
+        "30": 7,
+        "4": 6,
+        "5": 7,
+        "6": 5,
+        "7": 6,
+        "8": 5,
+        "9": 6
+      },
+      "kill_relative_to_send_end_ms": {
+        "min": -26.021,
+        "median": 14.441,
+        "max": 39.783
+      },
+      "contradiction_runs": []
+    },
+    "D": {
+      "n": 100,
+      "expected_n": 100,
+      "observed": 100,
+      "errors": [],
+      "success": 100,
+      "wall_seconds": {
+        "min": 0.747,
+        "median": 0.87,
+        "max": 1.362
+      },
+      "final_counts": {
+        "question_cards": {
+          "1": 100
+        },
+        "completion_cards": {
+          "1": 100
+        },
+        "completions": {
+          "1": 100
+        },
+        "rounds": {
+          "2": 100
+        }
+      },
+      "answer_in_context": 100,
+      "new_round": 100,
+      "hub_present_worker_absent": 100,
+      "first_applied_before_retry": 100,
+      "socket_closed_without_response_reader": 100,
+      "retry_acknowledged": 100
+    },
+    "E": {
+      "n": 100,
+      "expected_n": 100,
+      "observed": 100,
+      "errors": [],
+      "success": 100,
+      "wall_seconds": {
+        "min": 67.992,
+        "median": 68.283,
+        "max": 68.866
+      },
+      "final_counts": {
+        "question_cards": {
+          "1": 100
+        },
+        "completion_cards": {
+          "1": 100
+        },
+        "completions": {
+          "1": 100
+        },
+        "rounds": {
+          "2": 100
+        }
+      },
+      "answer_in_context": 100,
+      "new_round": 100,
+      "hub_present_worker_absent": 100,
+      "notification_deliveries": {
+        "1": 90,
+        "2": 10
+      },
+      "duplicated_notifications": 10,
+      "single_delivery": 90,
+      "total_completion_deliveries": 110,
+      "delay_histogram": {
+        "0": 2,
+        "1": 4,
+        "10": 2,
+        "11": 3,
+        "12": 3,
+        "13": 4,
+        "14": 4,
+        "15": 4,
+        "16": 3,
+        "17": 3,
+        "18": 4,
+        "19": 2,
+        "2": 3,
+        "20": 4,
+        "21": 4,
+        "22": 3,
+        "23": 4,
+        "24": 3,
+        "25": 2,
+        "26": 2,
+        "27": 3,
+        "28": 4,
+        "29": 3,
+        "3": 4,
+        "30": 4,
+        "4": 3,
+        "5": 4,
+        "6": 3,
+        "7": 3,
+        "8": 3,
+        "9": 3
+      },
+      "actual_kill_after_sink_ms": {
+        "min": 0.382,
+        "median": 15.638,
+        "max": 31.871
+      },
+      "repeat_after_first_seconds": {
+        "min": 60.004,
+        "median": 60.009,
+        "max": 60.02
+      }
+    },
+    "F": {
+      "n": 5,
+      "expected_n": 5,
+      "observed": 5,
+      "errors": [],
+      "success": 0,
+      "wall_seconds": {
+        "min": 616.423,
+        "median": 616.464,
+        "max": 616.539
+      },
+      "final_counts": {
+        "question_cards": {
+          "0": 5
+        },
+        "completion_cards": {
+          "0": 5
+        },
+        "completions": {
+          "0": 5
+        },
+        "rounds": {
+          "1": 5
+        }
+      },
+      "final_run_states": {
+        "claimed": 5
+      },
+      "final_attempts": {
+        "0": 5
+      },
+      "observed_seconds": {
+        "min": 615.717,
+        "median": 615.767,
+        "max": 615.791
+      },
+      "notice_runs": 5,
+      "first_notice_seconds": {
+        "min": 600.676,
+        "median": 600.728,
+        "max": 600.752
+      },
+      "transitions": [
+        {
+          "run": 5,
+          "states": [
+            {
+              "elapsed_ms": 4.262022000000002,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 600682.617744,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "\u63a5\u5355\u7a0b\u5e8f\u6ca1\u8fde\u4e0a",
+                    "text": "script-worker \u5df2\u7ecf 10 \u5206\u949f\u6ca1\u8fde\u4e0a\u4e2d\u53f0\uff0c\u6709 1 \u4ef6\u4efb\u52a1\u5728\u6392\u961f\u6216\u5728\u8dd1\uff08\u8bf7\u770b\u4e00\u773c\u90a3\u53f0\u7535\u8111\u662f\u4e0d\u662f\u5173\u673a\u3001\u4f11\u7720\u6216\u65ad\u7f51\u4e86\uff09\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "states": [
+            {
+              "elapsed_ms": 5.1850540000000365,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 600676.378066,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "\u63a5\u5355\u7a0b\u5e8f\u6ca1\u8fde\u4e0a",
+                    "text": "script-worker \u5df2\u7ecf 10 \u5206\u949f\u6ca1\u8fde\u4e0a\u4e2d\u53f0\uff0c\u6709 1 \u4ef6\u4efb\u52a1\u5728\u6392\u961f\u6216\u5728\u8dd1\uff08\u8bf7\u770b\u4e00\u773c\u90a3\u53f0\u7535\u8111\u662f\u4e0d\u662f\u5173\u673a\u3001\u4f11\u7720\u6216\u65ad\u7f51\u4e86\uff09\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 4,
+          "states": [
+            {
+              "elapsed_ms": 4.663022999999953,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 600728.034413,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "\u63a5\u5355\u7a0b\u5e8f\u6ca1\u8fde\u4e0a",
+                    "text": "script-worker \u5df2\u7ecf 10 \u5206\u949f\u6ca1\u8fde\u4e0a\u4e2d\u53f0\uff0c\u6709 1 \u4ef6\u4efb\u52a1\u5728\u6392\u961f\u6216\u5728\u8dd1\uff08\u8bf7\u770b\u4e00\u773c\u90a3\u53f0\u7535\u8111\u662f\u4e0d\u662f\u5173\u673a\u3001\u4f11\u7720\u6216\u65ad\u7f51\u4e86\uff09\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 1,
+          "states": [
+            {
+              "elapsed_ms": 4.765203000000042,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 600744.3633,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "\u63a5\u5355\u7a0b\u5e8f\u6ca1\u8fde\u4e0a",
+                    "text": "script-worker \u5df2\u7ecf 10 \u5206\u949f\u6ca1\u8fde\u4e0a\u4e2d\u53f0\uff0c\u6709 1 \u4ef6\u4efb\u52a1\u5728\u6392\u961f\u6216\u5728\u8dd1\uff08\u8bf7\u770b\u4e00\u773c\u90a3\u53f0\u7535\u8111\u662f\u4e0d\u662f\u5173\u673a\u3001\u4f11\u7720\u6216\u65ad\u7f51\u4e86\uff09\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "states": [
+            {
+              "elapsed_ms": 4.193211000000019,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 600751.7245530001,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "\u63a5\u5355\u7a0b\u5e8f\u6ca1\u8fde\u4e0a",
+                    "text": "script-worker \u5df2\u7ecf 10 \u5206\u949f\u6ca1\u8fde\u4e0a\u4e2d\u53f0\uff0c\u6709 1 \u4ef6\u4efb\u52a1\u5728\u6392\u961f\u6216\u5728\u8dd1\uff08\u8bf7\u770b\u4e00\u773c\u90a3\u53f0\u7535\u8111\u662f\u4e0d\u662f\u5173\u673a\u3001\u4f11\u7720\u6216\u65ad\u7f51\u4e86\uff09\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "F-online": {
+      "n": 5,
+      "expected_n": 5,
+      "observed": 5,
+      "errors": [],
+      "success": 0,
+      "wall_seconds": {
+        "min": 316.068,
+        "median": 316.089,
+        "max": 316.178
+      },
+      "final_counts": {
+        "question_cards": {
+          "0": 5
+        },
+        "completion_cards": {
+          "0": 5
+        },
+        "completions": {
+          "0": 5
+        },
+        "rounds": {
+          "1": 5
+        }
+      },
+      "final_run_states": {
+        "unknown": 5
+      },
+      "final_attempts": {
+        "0": 5
+      },
+      "observed_seconds": {
+        "min": 315.363,
+        "median": 315.391,
+        "max": 315.429
+      },
+      "notice_runs": 5,
+      "first_notice_seconds": {
+        "min": 300.311,
+        "median": 300.334,
+        "max": 300.372
+      },
+      "transitions": [
+        {
+          "run": 4,
+          "states": [
+            {
+              "elapsed_ms": 6.498288000000002,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 300323.699931,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "unknown",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "Colour task",
+                    "text": "\u4ea4\u7ed9 Deterministic script \u540e\u8d85\u8fc7 5 \u5206\u949f\u6ca1\u6709\u56de\u97f3\uff0c\u4e0d\u786e\u5b9a\u505a\u6ca1\u505a\u5b8c\uff1b\u540e\u7eed\u65b0\u4efb\u52a1\u7167\u5e38\u5904\u7406\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 5,
+          "states": [
+            {
+              "elapsed_ms": 5.657255999999961,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 300310.62902500003,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "unknown",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "Colour task",
+                    "text": "\u4ea4\u7ed9 Deterministic script \u540e\u8d85\u8fc7 5 \u5206\u949f\u6ca1\u6709\u56de\u97f3\uff0c\u4e0d\u786e\u5b9a\u505a\u6ca1\u505a\u5b8c\uff1b\u540e\u7eed\u65b0\u4efb\u52a1\u7167\u5e38\u5904\u7406\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "states": [
+            {
+              "elapsed_ms": 5.219284000000016,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 300333.82211,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "unknown",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "Colour task",
+                    "text": "\u4ea4\u7ed9 Deterministic script \u540e\u8d85\u8fc7 5 \u5206\u949f\u6ca1\u6709\u56de\u97f3\uff0c\u4e0d\u786e\u5b9a\u505a\u6ca1\u505a\u5b8c\uff1b\u540e\u7eed\u65b0\u4efb\u52a1\u7167\u5e38\u5904\u7406\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "states": [
+            {
+              "elapsed_ms": 5.799545999999964,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 300361.696228,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "unknown",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "Colour task",
+                    "text": "\u4ea4\u7ed9 Deterministic script \u540e\u8d85\u8fc7 5 \u5206\u949f\u6ca1\u6709\u56de\u97f3\uff0c\u4e0d\u786e\u5b9a\u505a\u6ca1\u505a\u5b8c\uff1b\u540e\u7eed\u65b0\u4efb\u52a1\u7167\u5e38\u5904\u7406\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "run": 1,
+          "states": [
+            {
+              "elapsed_ms": 6.254476999999952,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "claimed",
+                    "attempts": 0
+                  }
+                ],
+                "cards": []
+              }
+            },
+            {
+              "elapsed_ms": 300371.830915,
+              "state": {
+                "runs": [
+                  {
+                    "id": 1,
+                    "state": "unknown",
+                    "attempts": 0
+                  }
+                ],
+                "cards": [
+                  {
+                    "id": 1,
+                    "title": "Colour task",
+                    "text": "\u4ea4\u7ed9 Deterministic script \u540e\u8d85\u8fc7 5 \u5206\u949f\u6ca1\u6709\u56de\u97f3\uff0c\u4e0d\u786e\u5b9a\u505a\u6ca1\u505a\u5b8c\uff1b\u540e\u7eed\u65b0\u4efb\u52a1\u7167\u5e38\u5904\u7406\u3002"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "supplementary": {
+    "pilot-A": {
+      "n": 1,
+      "outcomes": {
+        "harness-error": 1
+      },
+      "notification_deliveries": {},
+      "errors": [
+        {
+          "run": 1,
+          "error": "Error: HTTP 404: {\"error\":\"\u6ca1\u6709\u8fd9\u4e2a\u5730\u5740\"}",
+          "logs": "logs/pilot-a-001"
+        }
+      ]
+    },
+    "pilot2-B": {
+      "n": 1,
+      "outcomes": {
+        "harness-error": 1
+      },
+      "notification_deliveries": {},
+      "errors": [
+        {
+          "run": 1,
+          "error": "Error: HTTP 404 /v1/work/state: {\"error\":\"\u6ca1\u6709\u8fd9\u4e2a\u5730\u5740\"}",
+          "logs": "logs/pilot2-b-001"
+        }
+      ]
+    },
+    "pilot3-A": {
+      "n": 1,
+      "outcomes": {
+        "observed": 1
+      },
+      "notification_deliveries": {},
+      "errors": []
+    },
+    "pilot3-B": {
+      "n": 1,
+      "outcomes": {
+        "observed": 1
+      },
+      "notification_deliveries": {},
+      "errors": []
+    },
+    "pilot3-C": {
+      "n": 1,
+      "outcomes": {
+        "observed": 1
+      },
+      "notification_deliveries": {},
+      "errors": []
+    },
+    "pilot3-D": {
+      "n": 1,
+      "outcomes": {
+        "observed": 1
+      },
+      "notification_deliveries": {},
+      "errors": []
+    },
+    "pilot3-E": {
+      "n": 1,
+      "outcomes": {
+        "observed": 1
+      },
+      "notification_deliveries": {
+        "2": 1
+      },
+      "errors": []
+    },
+    "pilot3-F-online": {
+      "n": 1,
+      "outcomes": {
+        "observed": 1
+      },
+      "notification_deliveries": {},
+      "errors": []
+    }
+  },
+  "total_main_runs": 470,
+  "complete": true,
+  "inputs": {
+    "results/main-A.jsonl": "432022f16ceb3b060e4479e266674bc066bb1210d67ea88d05546c3f30e463a1",
+    "results/main-B.jsonl": "b63066febe6566dd2b897a43717e8b9ed94a6e07f79a5d52d264901c20c75c6b",
+    "results/main-C.jsonl": "4d83b53b1e43c7dab2976fc9c52255267412f0ddb08ceecc2ca0655e8c80881d",
+    "results/main-D.jsonl": "06f121c1452340975248cf3fcee6028945f154eecca1fd063b2eac12a21e7fc0",
+    "results/main-E.jsonl": "353a49f174b49b3c7f72afde519ffb9c4b1bdcf748c1b2ff86fbf3eebf93a66e",
+    "results/main-F-online.jsonl": "e6bf6d99b5290168e335baf6ddc5f138f9a6509fd44fb14ff3e1697f565731bb",
+    "results/main-F.jsonl": "071de89b0867d668aeefecc74dfef19154360e587ac4b12ebd697708f617cf43",
+    "results/pilot-A.jsonl": "d8c3d4a5b8e770381a1f38708183b344a03a1b2b948ca8de4f303b8ee7624533",
+    "results/pilot2-B.jsonl": "53fbbeb4f88a9bccdd9bc2ab027614915e3545979ec0e8913f08c9d265c13c62",
+    "results/pilot3-A.jsonl": "551290166a2fb5223498eed30ead70cbf0c4c3f010a1ce5338f931f59b20ccca",
+    "results/pilot3-B.jsonl": "8c6c6d07926a2894d59ff4e67d12648c23104d20997c28a3ec1420ae153d1d97",
+    "results/pilot3-C.jsonl": "0d0ba5144f1ada6723d2c15af916c3a998fe3501e7325bf3e5ae5bf3fcd503a8",
+    "results/pilot3-D.jsonl": "b0a41464b1b7e9846eb09b9388e0fb2aada393f131be04c72ad84fd05430010c",
+    "results/pilot3-E.jsonl": "642716b472d1c1efb28f3c4b379044c18755dcbaba0ddababe8a957eebc6d564",
+    "results/pilot3-F-online.jsonl": "0817608083bbe96730ddd0168d685751b7d58d2207411148a209a3f67806b408"
+  },
+  "harness_sha256": {
+    "bootstrap.mjs": "af26bf3c6230852c07aa4f037bb71578e9e7c101c57197b4e0167e3a91e5e3c3",
+    "harness.mjs": "a5cca442dfbfd2cb44ae9627d2f50e98f9b7621701b101854b239fdc9080ba11",
+    "harness.py": "440403fb21988eed26c67a7fa2cbd8ad697f2e25eff9dcb4f37c712fec0ca257",
+    "run-all.sh": "ccd1096b77c78766f0740dab7c6e79fcb40ccf75118409766538b6e74e0d97ae",
+    "run_all.py": "0b6e8aeda7ed6ceadfd055bd734bc5295f881aef1cc97da72c03a8e7bd9e8b94",
+    "setup.py": "d82049aebb0ae533baa53f0b5489842f822a24c9157dfea597970ff03ac0daff",
+    "setup.sh": "2fc1ef67c14cc1c82ba1da9ae29fcccaaded74c3a6aa540ca90b782a62abb743",
+    "summarize.py": "25047e9c9e78c26216ac0d9e489a108d7a85f6c7a20192f7f96d1f5ca74b257e",
+    "worker.mjs": "9ab09825b7b1a7edb58a46c3e8a5c0f0aeb491c9d9cb3cc31c305ac839a193d4",
+    "write_report.py": "3524b78d49bbfe5ddf4fe1351cc9068556ff625821aaf1f1b27b646f7b7d2d5f"
+  },
+  "screens": [
+    {
+      "experiment": "A",
+      "run": 1,
+      "delay_ms": 0,
+      "logs": "logs/main-a-001",
+      "replay_command": "python3 episodes/when-the-ai-agent-exits-what-keeps-its-task-alive/demo/harness.py --experiments A --start 1 --count 1 --batch screen-a-1",
+      "container_command": "nice -n 10 node --disable-warning=ExperimentalWarning /work/harness.mjs A 1 0 main",
+      "processes": [
+        {
+          "ms": 562.263241,
+          "phase": "question_open",
+          "listing": [
+            "1       0  10 SNsl 82404 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs A 1 0 main",
+            "22       1  19 SNl  112320 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up",
+            "39       1  10 RN    4260 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"
+          ],
+          "hub_pid": 22,
+          "hub_exists": true,
+          "worker_exists": false
+        },
+        {
+          "ms": 10566.872846,
+          "phase": "after_idle",
+          "listing": [
+            "1       0  10 SNsl 82608 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs A 1 0 main",
+            "22       1  19 SNl  112320 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up",
+            "41       1  10 RN    4224 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"
+          ],
+          "hub_pid": 22,
+          "hub_exists": true,
+          "worker_exists": false
+        }
+      ],
+      "events": [
+        {
+          "ms": 554.421549,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        },
+        {
+          "ms": 10587.792595,
+          "card": 1,
+          "choice": 0,
+          "response": {
+            "changed": true,
+            "state": "decided"
+          },
+          "event": "answer_sent"
+        },
+        {
+          "ms": 10645.250855,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        }
+      ],
+      "hub_log": [
+        "2026-11-12T05:26:36.079Z [hub] listening on 127.0.0.1:3350"
+      ],
+      "worker_log_excerpt": [
+        "{\"ms\":554.421549,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}",
+        "{\"ms\":10645.250855,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}"
+      ],
+      "final_counts": {
+        "question_cards": 1,
+        "completion_cards": 1,
+        "completions": 1,
+        "rounds": 2,
+        "audit_timers": 0
+      },
+      "idle": {
+        "before": {
+          "ms": 562.448201,
+          "cpu_ticks": 22,
+          "rss_kib": 112320
+        },
+        "after": {
+          "ms": 10563.128966,
+          "cpu_ticks": 22,
+          "rss_kib": 112320
+        },
+        "elapsed_ms": 10000.680765000001,
+        "cpu_ticks": 0,
+        "clock_ticks_per_second": 100
+      },
+      "notification_deliveries": null
+    },
+    {
+      "experiment": "B",
+      "run": 2,
+      "delay_ms": 0,
+      "logs": "logs/main-b-002",
+      "replay_command": "python3 episodes/when-the-ai-agent-exits-what-keeps-its-task-alive/demo/harness.py --experiments B --start 2 --count 1 --batch screen-b-2",
+      "container_command": "nice -n 10 node --disable-warning=ExperimentalWarning /work/harness.mjs B 2 0 main",
+      "processes": [
+        {
+          "ms": 657.500259,
+          "phase": "question_open",
+          "listing": [
+            "1       0  10 SNsl 82336 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs B 2 0 main",
+            "22       1  19 SNl  112112 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up",
+            "39       1  10 RN    4348 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"
+          ],
+          "hub_pid": 22,
+          "hub_exists": true,
+          "worker_exists": false
+        }
+      ],
+      "events": [
+        {
+          "ms": 650.328729,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        },
+        {
+          "ms": 2970.34701,
+          "card": 1,
+          "choice": 0,
+          "response": {
+            "changed": true,
+            "state": "decided"
+          },
+          "event": "answer_sent"
+        },
+        {
+          "ms": 3048.461489,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        }
+      ],
+      "hub_log": [
+        "2026-11-12T05:27:38.826Z [hub] listening on 127.0.0.1:3350",
+        "2026-11-12T05:27:41.219Z [hub] listening on 127.0.0.1:3350"
+      ],
+      "worker_log_excerpt": [
+        "{\"ms\":650.328729,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}",
+        "{\"ms\":3048.461489,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}"
+      ],
+      "final_counts": {
+        "question_cards": 1,
+        "completion_cards": 1,
+        "completions": 1,
+        "rounds": 2,
+        "audit_timers": 0
+      },
+      "idle": null,
+      "notification_deliveries": null
+    },
+    {
+      "experiment": "C",
+      "run": 2,
+      "delay_ms": 16,
+      "logs": "logs/main-c-002",
+      "replay_command": "python3 episodes/when-the-ai-agent-exits-what-keeps-its-task-alive/demo/harness.py --experiments C --start 2 --count 1 --batch screen-c-2",
+      "container_command": "nice -n 10 node --disable-warning=ExperimentalWarning /work/harness.mjs C 2 16 main",
+      "processes": [
+        {
+          "ms": 3431.225685,
+          "phase": "question_open",
+          "listing": [
+            "1       0  10 SNsl 82680 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs C 2 16 main",
+            "39       1  19 SNl  114108 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up",
+            "57       1  10 RN    4276 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"
+          ],
+          "hub_pid": 39,
+          "hub_exists": true,
+          "worker_exists": false
+        }
+      ],
+      "events": [
+        {
+          "ms": 921.107308,
+          "event": "hub_kill_sent"
+        },
+        {
+          "ms": 930.099833,
+          "event": "receipt_error",
+          "code": "ECONNRESET"
+        },
+        {
+          "ms": 3402.790476,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        },
+        {
+          "ms": 3452.233094,
+          "card": 1,
+          "choice": 0,
+          "response": {
+            "changed": true,
+            "state": "decided"
+          },
+          "event": "answer_sent"
+        },
+        {
+          "ms": 3570.780396,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        }
+      ],
+      "hub_log": [
+        "2026-11-12T05:28:07.544Z [hub] listening on 127.0.0.1:3350",
+        "2026-11-12T05:28:10.088Z [hub] listening on 127.0.0.1:3350"
+      ],
+      "worker_log_excerpt": [
+        "{\"ms\":921.107308,\"event\":\"hub_kill_sent\"}",
+        "{\"ms\":930.099833,\"event\":\"receipt_error\",\"code\":\"ECONNRESET\"}",
+        "{\"ms\":3402.790476,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}",
+        "{\"ms\":3570.780396,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}"
+      ],
+      "final_counts": {
+        "question_cards": 1,
+        "completion_cards": 1,
+        "completions": 1,
+        "rounds": 2,
+        "audit_timers": 0
+      },
+      "idle": null,
+      "notification_deliveries": null
+    },
+    {
+      "experiment": "E",
+      "run": 25,
+      "delay_ms": 2,
+      "logs": "logs/main-e-025",
+      "replay_command": "python3 episodes/when-the-ai-agent-exits-what-keeps-its-task-alive/demo/harness.py --experiments E --start 25 --count 1 --batch screen-e-25",
+      "container_command": "nice -n 10 node --disable-warning=ExperimentalWarning /work/harness.mjs E 25 2 main",
+      "processes": [
+        {
+          "ms": 800.407993,
+          "phase": "question_open",
+          "listing": [
+            "1       0  10 SNsl 82632 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs E 25 2 main",
+            "22       1  19 RNl  122584 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up",
+            "39       1  10 RN    4352 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"
+          ],
+          "hub_pid": 22,
+          "hub_exists": true,
+          "worker_exists": false
+        }
+      ],
+      "events": [
+        {
+          "ms": 781.304439,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        },
+        {
+          "ms": 790.532255,
+          "body": {
+            "text": "Pick a colour\n\nChoose Blue or Green.\n\n1. Blue\n2. Green",
+            "mrkdwn": false,
+            "unfurl_links": false,
+            "unfurl_media": false
+          },
+          "event": "sink_received"
+        },
+        {
+          "ms": 825.715693,
+          "card": 1,
+          "choice": 0,
+          "response": {
+            "changed": true,
+            "state": "decided"
+          },
+          "event": "answer_sent"
+        },
+        {
+          "ms": 950.720774,
+          "event": "receipt_ack",
+          "status": 200,
+          "body": "{\"rejected\":[]}"
+        },
+        {
+          "ms": 970.93075,
+          "body": {
+            "text": "Task complete\n\nBlue selected.",
+            "mrkdwn": false,
+            "unfurl_links": false,
+            "unfurl_media": false
+          },
+          "event": "sink_received"
+        },
+        {
+          "ms": 974.234369,
+          "delay_ms": 2,
+          "event": "hub_kill_after_sink"
+        },
+        {
+          "ms": 60980.005222,
+          "body": {
+            "text": "Task complete\n\nBlue selected.",
+            "mrkdwn": false,
+            "unfurl_links": false,
+            "unfurl_media": false
+          },
+          "event": "sink_received"
+        }
+      ],
+      "hub_log": [
+        "2026-11-12T05:28:45.372Z [hub] listening on 127.0.0.1:3350",
+        "2026-11-12T05:28:47.974Z [hub] listening on 127.0.0.1:3350"
+      ],
+      "worker_log_excerpt": [
+        "{\"ms\":781.304439,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}",
+        "{\"ms\":950.720774,\"event\":\"receipt_ack\",\"status\":200,\"body\":\"{\\\"rejected\\\":[]}\"}"
+      ],
+      "final_counts": {
+        "question_cards": 1,
+        "completion_cards": 1,
+        "completions": 1,
+        "rounds": 2,
+        "audit_timers": 0
+      },
+      "idle": null,
+      "notification_deliveries": 2
+    }
+  ]
+}

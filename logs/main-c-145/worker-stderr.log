@@ -1,0 +1,6 @@
+Warning: Detected unsettled top-level await at file:///work/worker.mjs:79
+      else await submit(job, result, mode === 'crash' ? delayString : undefined);
+           ^
+
+
+

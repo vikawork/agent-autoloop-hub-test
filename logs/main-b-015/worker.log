@@ -1,0 +1,10 @@
+{"ms":876.716433,"event":"claimed","run":1,"attempt":1,"context":{"events":[{"id":"colour-task","source":"input","sourceName":"Fixture input","type":"colour.pick","subject":"colour","summary":"Pick a colour","detail":"","link":"","receivedAt":"2026-11-12T05:27:50.802Z","hops":0}],"answers":[],"timers":[],"waiting":[],"open":[],"decided":[]},"session":null}
+{"ms":877.495985,"event":"receipt_prepared","run":1,"result":{"outcome":"done","summary":"Waiting for colour","ask":[{"title":"Pick a colour","text":"Choose Blue or Green.","options":["Blue","Green"],"key":"colour","about":"Finish after the colour answer; do not ask again."}],"later":[{"key":"audit-check","at":"2026-11-12T06:27:50.880Z","about":"Atomic receipt witness"}]}}
+{"ms":879.07315,"event":"receipt_send_start"}
+{"ms":879.798152,"event":"receipt_send_end"}
+{"ms":891.950366,"event":"receipt_ack","status":200,"body":"{\"rejected\":[]}"}
+{"ms":3266.25558,"event":"claimed","run":2,"attempt":1,"context":{"events":[{"id":"card:1","source":"input","sourceName":"Fixture input","type":"card.answered","subject":"","summary":"Pick a colour","detail":"","link":"","receivedAt":"2026-11-12T05:27:53.170Z","hops":0}],"answers":[{"card":1,"title":"Pick a colour","options":["Blue","Green"],"choice":0,"chosen":"Blue","text":null,"about":"Finish after the colour answer; do not ask again.","by":"本人","at":"2026-11-12T05:27:53.170Z"}],"timers":[],"waiting":[{"key":"audit-check","about":"Atomic receipt witness","at":"2026-11-12T06:27:50.880Z"}],"open":[],"decided":[]},"session":null}
+{"ms":3266.585401,"event":"receipt_prepared","run":2,"result":{"outcome":"done","summary":"Task complete: Blue","notice":[{"title":"Task complete","text":"Blue selected.","key":"complete","fyi":true}],"later":[{"key":"audit-check","cancel":true}]}}
+{"ms":3267.884945,"event":"receipt_send_start"}
+{"ms":3268.427677,"event":"receipt_send_end"}
+{"ms":3285.285514,"event":"receipt_ack","status":200,"body":"{\"rejected\":[]}"}

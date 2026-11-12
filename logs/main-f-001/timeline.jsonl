@@ -1,0 +1,11 @@
+{"ms":393.316398,"pid":22,"event":"hub_spawned"}
+{"ms":647.768019,"event":"hub_ready"}
+{"ms":659.656282,"event":"event_accepted","duplicate":false,"routed":["Colour task"],"paused":[]}
+{"ms":744.570569,"phase":"worker_claimed","listing":["1       0  10 SNsl 79868 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs F 1 0 main","22       1  19 SNl  114088 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up","31       1  19 SNl  64968 00:00:00 node work/worker.mjs hold 205695408955776 22 0","39       1  10 RN    4204 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"],"hub_pid":22,"hub_exists":true,"worker_exists":true,"event":"process_listing"}
+{"ms":744.653189,"pid":31,"event":"worker_kill_sent"}
+{"ms":746.970226,"mode":"hold","code":null,"signal":"SIGKILL","stderr":"","event":"worker_exited"}
+{"ms":749.385183,"phase":"after_worker_kill","listing":["1       0  10 SNsl 79928 00:00:00 node --disable-warning=ExperimentalWarning work/harness.mjs F 1 0 main","22       1  19 SNl  114100 00:00:00 node --disable-warning=ExperimentalWarning src/bin/agent-autoloop.ts up","40       1  10 RN    4268 00:00:00 ps -eo pid,ppid,ni,stat,rss,time,args --no-headers"],"hub_pid":22,"hub_exists":true,"worker_exists":false,"event":"process_listing"}
+{"ms":754.239696,"elapsed_ms":4.765203000000042,"state":{"runs":[{"id":1,"state":"claimed","attempts":0}],"cards":[]},"event":"worker_loss_state"}
+{"ms":601493.832983,"elapsed_ms":600744.3633,"state":{"runs":[{"id":1,"state":"claimed","attempts":0}],"cards":[{"id":1,"title":"接单程序没连上","text":"script-worker 已经 10 分钟没连上中台，有 1 件任务在排队或在跑（请看一眼那台电脑是不是关机、休眠或断网了）。"}]},"event":"worker_loss_state"}
+{"ms":616532.85956,"label":"final","cards":[{"id":1,"kind":"notice","key":"worker:script-worker:offline:2026-11-12T05:26:21.679Z","state":"open","title":"接单程序没连上","choice":null,"answer":null,"result":null,"run_id":null,"fyi":0}],"runs":[{"id":1,"state":"claimed","summary":null,"attempts":0,"error":null,"claimed_at":"2026-11-12T05:26:21.685Z","finished_at":null,"seen_at":"2026-11-12T05:26:21.685Z"}],"timers":[],"deliveries":[],"counts":{"question_cards":0,"completion_cards":0,"completions":0,"rounds":1,"audit_timers":0},"event":"snapshot"}
+{"ms":616533.12363,"signal":"SIGTERM","event":"hub_signal"}

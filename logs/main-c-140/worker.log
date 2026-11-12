@@ -1,0 +1,14 @@
+{"ms":636.931767,"event":"claimed","run":1,"attempt":1,"context":{"events":[{"id":"colour-task","source":"input","sourceName":"Fixture input","type":"colour.pick","subject":"colour","summary":"Pick a colour","detail":"","link":"","receivedAt":"2026-11-12T05:30:13.773Z","hops":0}],"answers":[],"timers":[],"waiting":[],"open":[],"decided":[]},"session":null}
+{"ms":637.302158,"event":"receipt_prepared","run":1,"result":{"outcome":"done","summary":"Waiting for colour","ask":[{"title":"Pick a colour","text":"Choose Blue or Green.","options":["Blue","Green"],"key":"colour","about":"Finish after the colour answer; do not ask again."}],"later":[{"key":"audit-check","at":"2026-11-12T06:30:13.850Z","about":"Atomic receipt witness"}]}}
+{"ms":638.482042,"event":"receipt_send_start"}
+{"ms":638.970273,"event":"receipt_send_end"}
+{"ms":647.538297,"event":"receipt_ack","status":200,"body":"{\"rejected\":[]}"}
+{"ms":659.13796,"event":"hub_kill_sent"}
+{"ms":2912.065601,"event":"receipt_send_start"}
+{"ms":2912.818373,"event":"receipt_send_end"}
+{"ms":2917.254165,"event":"receipt_ack","status":200,"body":"{\"rejected\":[],\"duplicate\":true}"}
+{"ms":2982.96867,"event":"claimed","run":2,"attempt":1,"context":{"events":[{"id":"card:1","source":"input","sourceName":"Fixture input","type":"card.answered","subject":"","summary":"Pick a colour","detail":"","link":"","receivedAt":"2026-11-12T05:30:16.143Z","hops":0}],"answers":[{"card":1,"title":"Pick a colour","options":["Blue","Green"],"choice":0,"chosen":"Blue","text":null,"about":"Finish after the colour answer; do not ask again.","by":"本人","at":"2026-11-12T05:30:16.143Z"}],"timers":[],"waiting":[{"key":"audit-check","about":"Atomic receipt witness","at":"2026-11-12T06:30:13.850Z"}],"open":[],"decided":[]},"session":null}
+{"ms":2983.13404,"event":"receipt_prepared","run":2,"result":{"outcome":"done","summary":"Task complete: Blue","notice":[{"title":"Task complete","text":"Blue selected.","key":"complete","fyi":true}],"later":[{"key":"audit-check","cancel":true}]}}
+{"ms":2984.189363,"event":"receipt_send_start"}
+{"ms":2984.619034,"event":"receipt_send_end"}
+{"ms":3001.297661,"event":"receipt_ack","status":200,"body":"{\"rejected\":[]}"}

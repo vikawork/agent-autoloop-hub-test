@@ -1,0 +1,62 @@
+{
+  "label": "waiting",
+  "ms": 891.053067,
+  "cards": [
+    {
+      "id": 1,
+      "kind": "ask",
+      "key": "thread:Colour task::colour",
+      "state": "open",
+      "title": "Pick a colour",
+      "choice": null,
+      "answer": null,
+      "result": null,
+      "run_id": 1,
+      "fyi": 0
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "state": "done",
+      "summary": "Waiting for colour",
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:28:45.895Z",
+      "finished_at": "2026-11-12T05:28:45.913Z",
+      "seen_at": "2026-11-12T05:28:45.895Z"
+    }
+  ],
+  "timers": [
+    {
+      "at": "2026-11-12T06:28:45.909Z",
+      "about": "Atomic receipt witness",
+      "session": null,
+      "agent": "script",
+      "hops": 0,
+      "rule": "Colour task",
+      "lane": "",
+      "key": "audit-check",
+      "source": "input",
+      "event_id": null,
+      "created_at": "2026-11-12T05:28:45.913Z",
+      "id": 1
+    }
+  ],
+  "deliveries": [
+    {
+      "card_id": 1,
+      "ref": null,
+      "version": 0,
+      "tries": 1,
+      "not_before": "2026-11-12T05:29:45.923Z"
+    }
+  ],
+  "counts": {
+    "question_cards": 1,
+    "completion_cards": 0,
+    "completions": 0,
+    "rounds": 1,
+    "audit_timers": 1
+  }
+}

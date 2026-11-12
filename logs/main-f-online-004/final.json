@@ -1,0 +1,39 @@
+{
+  "label": "final",
+  "ms": 316065.477334,
+  "cards": [
+    {
+      "id": 1,
+      "kind": "notice",
+      "key": "run:1:unknown",
+      "state": "open",
+      "title": "Colour task",
+      "choice": null,
+      "answer": null,
+      "result": null,
+      "run_id": null,
+      "fyi": 0
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "state": "unknown",
+      "summary": null,
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:26:21.768Z",
+      "finished_at": null,
+      "seen_at": "2026-11-12T05:26:21.768Z"
+    }
+  ],
+  "timers": [],
+  "deliveries": [],
+  "counts": {
+    "question_cards": 0,
+    "completion_cards": 0,
+    "completions": 0,
+    "rounds": 1,
+    "audit_timers": 0
+  }
+}

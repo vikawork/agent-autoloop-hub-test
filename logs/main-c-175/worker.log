@@ -1,0 +1,14 @@
+{"ms":536.434906,"event":"claimed","run":1,"attempt":1,"context":{"events":[{"id":"colour-task","source":"input","sourceName":"Fixture input","type":"colour.pick","subject":"colour","summary":"Pick a colour","detail":"","link":"","receivedAt":"2026-11-12T05:30:42.157Z","hops":0}],"answers":[],"timers":[],"waiting":[],"open":[],"decided":[]},"session":null}
+{"ms":536.819317,"event":"receipt_prepared","run":1,"result":{"outcome":"done","summary":"Waiting for colour","ask":[{"title":"Pick a colour","text":"Choose Blue or Green.","options":["Blue","Green"],"key":"colour","about":"Finish after the colour answer; do not ask again."}],"later":[{"key":"audit-check","at":"2026-11-12T06:30:42.236Z","about":"Atomic receipt witness"}]}}
+{"ms":537.90719,"event":"receipt_send_start"}
+{"ms":538.332451,"event":"receipt_send_end"}
+{"ms":546.942856,"event":"receipt_ack","status":200,"body":"{\"rejected\":[]}"}
+{"ms":556.576643,"event":"hub_kill_sent"}
+{"ms":2822.998614,"event":"receipt_send_start"}
+{"ms":2823.779846,"event":"receipt_send_end"}
+{"ms":2828.212919,"event":"receipt_ack","status":200,"body":"{\"rejected\":[],\"duplicate\":true}"}
+{"ms":2898.250975,"event":"claimed","run":2,"attempt":1,"context":{"events":[{"id":"card:1","source":"input","sourceName":"Fixture input","type":"card.answered","subject":"","summary":"Pick a colour","detail":"","link":"","receivedAt":"2026-11-12T05:30:44.541Z","hops":0}],"answers":[{"card":1,"title":"Pick a colour","options":["Blue","Green"],"choice":0,"chosen":"Blue","text":null,"about":"Finish after the colour answer; do not ask again.","by":"本人","at":"2026-11-12T05:30:44.541Z"}],"timers":[],"waiting":[{"key":"audit-check","about":"Atomic receipt witness","at":"2026-11-12T06:30:42.236Z"}],"open":[],"decided":[]},"session":null}
+{"ms":2898.425006,"event":"receipt_prepared","run":2,"result":{"outcome":"done","summary":"Task complete: Blue","notice":[{"title":"Task complete","text":"Blue selected.","key":"complete","fyi":true}],"later":[{"key":"audit-check","cancel":true}]}}
+{"ms":2904.262002,"event":"receipt_send_start"}
+{"ms":2904.730263,"event":"receipt_send_end"}
+{"ms":2912.323165,"event":"receipt_ack","status":200,"body":"{\"rejected\":[]}"}

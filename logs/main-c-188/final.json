@@ -1,0 +1,61 @@
+{
+  "label": "final",
+  "ms": 2854.134632,
+  "cards": [
+    {
+      "id": 1,
+      "kind": "ask",
+      "key": "thread:Colour task::colour",
+      "state": "done",
+      "title": "Pick a colour",
+      "choice": 0,
+      "answer": null,
+      "result": "Task complete: Blue",
+      "run_id": 1,
+      "fyi": 0
+    },
+    {
+      "id": 2,
+      "kind": "notice",
+      "key": "thread:Colour task::complete",
+      "state": "closed",
+      "title": "Task complete",
+      "choice": null,
+      "answer": null,
+      "result": null,
+      "run_id": 2,
+      "fyi": 1
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "state": "done",
+      "summary": "Waiting for colour",
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:30:54.388Z",
+      "finished_at": "2026-11-12T05:30:54.400Z",
+      "seen_at": "2026-11-12T05:30:54.388Z"
+    },
+    {
+      "id": 2,
+      "state": "done",
+      "summary": "Task complete: Blue",
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:30:56.710Z",
+      "finished_at": "2026-11-12T05:30:56.722Z",
+      "seen_at": "2026-11-12T05:30:56.710Z"
+    }
+  ],
+  "timers": [],
+  "deliveries": [],
+  "counts": {
+    "question_cards": 1,
+    "completion_cards": 1,
+    "completions": 1,
+    "rounds": 2,
+    "audit_timers": 0
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "label": "final",
+  "ms": 68346.897284,
+  "cards": [
+    {
+      "id": 1,
+      "kind": "ask",
+      "key": "thread:Colour task::colour",
+      "state": "done",
+      "title": "Pick a colour",
+      "choice": 0,
+      "answer": null,
+      "result": "Task complete: Blue",
+      "run_id": 1,
+      "fyi": 0
+    },
+    {
+      "id": 2,
+      "kind": "notice",
+      "key": "thread:Colour task::complete",
+      "state": "closed",
+      "title": "Task complete",
+      "choice": null,
+      "answer": null,
+      "result": null,
+      "run_id": 2,
+      "fyi": 1
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "state": "done",
+      "summary": "Waiting for colour",
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:28:45.987Z",
+      "finished_at": "2026-11-12T05:28:46.005Z",
+      "seen_at": "2026-11-12T05:28:45.987Z"
+    },
+    {
+      "id": 2,
+      "state": "done",
+      "summary": "Task complete: Blue",
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:28:46.112Z",
+      "finished_at": "2026-11-12T05:28:46.162Z",
+      "seen_at": "2026-11-12T05:28:46.112Z"
+    }
+  ],
+  "timers": [],
+  "deliveries": [
+    {
+      "card_id": 1,
+      "ref": "sent-1",
+      "version": 3,
+      "tries": 0,
+      "not_before": null
+    },
+    {
+      "card_id": 2,
+      "ref": "sent-2",
+      "version": 1,
+      "tries": 0,
+      "not_before": null
+    }
+  ],
+  "counts": {
+    "question_cards": 1,
+    "completion_cards": 1,
+    "completions": 1,
+    "rounds": 2,
+    "audit_timers": 0
+  }
+}

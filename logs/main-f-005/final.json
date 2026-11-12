@@ -1,0 +1,39 @@
+{
+  "label": "final",
+  "ms": 616418.037085,
+  "cards": [
+    {
+      "id": 1,
+      "kind": "notice",
+      "key": "worker:script-worker:offline:2026-11-12T05:26:21.544Z",
+      "state": "open",
+      "title": "接单程序没连上",
+      "choice": null,
+      "answer": null,
+      "result": null,
+      "run_id": null,
+      "fyi": 0
+    }
+  ],
+  "runs": [
+    {
+      "id": 1,
+      "state": "claimed",
+      "summary": null,
+      "attempts": 0,
+      "error": null,
+      "claimed_at": "2026-11-12T05:26:21.548Z",
+      "finished_at": null,
+      "seen_at": "2026-11-12T05:26:21.548Z"
+    }
+  ],
+  "timers": [],
+  "deliveries": [],
+  "counts": {
+    "question_cards": 0,
+    "completion_cards": 0,
+    "completions": 0,
+    "rounds": 1,
+    "audit_timers": 0
+  }
+}
